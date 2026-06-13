@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Here</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Cast Your Vote</h1>
+
+    <p>Select one candidate and submit your vote securely.</p>
+
+    <hr>
+
+    <form class="vote-form">
+
+        <div class="candidate-card">
+    <h3>Rahul</h3>
+    <p>Party A</p>
+
+    <label class="candidate-option">
+        <input type="radio" name="candidate" value="1">
+        Select Candidate
+    </label>
+</div>
+
+<div class="candidate-card">
+    <h3>Priya</h3>
+    <p>Party B</p>
+
+    <label class="candidate-option">
+        <input type="radio" name="candidate" value="2">
+        Select Candidate
+    </label>
+</div>
+
+<div class="candidate-card">
+    <h3>Arun</h3>
+    <p>Party C</p>
+
+    <label class="candidate-option">
+        <input type="radio" name="candidate" value="3">
+        Select Candidate
+    </label>
+</div>
+
+        <button type="button" onclick="submitVote()">
+            Submit Vote
+        </button>
+
+       
+
+        <a href="index.html" class="back-home">
+            Back to Home
+        </a>
+       
+
+    </form>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
