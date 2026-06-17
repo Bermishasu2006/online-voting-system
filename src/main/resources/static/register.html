@@ -1,37 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Here</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>User Registration</h2>
+    <div class="login-container form-container">
+    <form>
+    <label>Full Name</label>
+    <input type="text" id="fullName" placeholder="Enter Full name">
+    <br><br>
+    <label>Voter ID</label>
+    <input type-="text" id="registerVoterId" placeholder="Enter your voter ID">
+    <br><br>
+    <label>Password</label>
+    <input type="password" id="registerPassword" placeholder="Enter your password">
+    <br><br>
+    <label>Confirm Password</label>
+    <br>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password">
+    <br><br>
+    <button type="button" onclick="register()">Register</button>
+    </form>
+    <p>Already Registered?<a href="login.html">Login here</a></p>
+    <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+    <script src="script.js"></script>
 
-<input type="text" id="fullName" placeholder="Full Name"><br><br>
-<input type="text" id="voterId" placeholder="Voter ID"><br><br>
-<input type="password" id="password" placeholder="Password"><br><br>
-
-<button onclick="register()">Register</button>
-
-<script>
-    function register() {
-        fetch("http://localhost:8080/api/register", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                fullName: document.getElementById("fullName").value,
-                voterId: document.getElementById("voterId").value,
-                password: document.getElementById("password").value,
-                hasVoted: false
-            })
-        })
-            .then(response => response.json())
-            .then(data => {
-                alert("Registered Successfully!");
-                console.log(data);
-            });
-    }
-</script>
 </body>
-</html>
+</html></html>
