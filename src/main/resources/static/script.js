@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://online-voting-system-qc0g.onrender.com";
+const API_BASE_URL = "";
 
 function login() {
     let voterId = document.getElementById("voterId").value;
